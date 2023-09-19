@@ -3,3 +3,37 @@
     height: 250px;
     width: 270px;
 }
+
+.card-img-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.card:hover img{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    opacity: .5;
+}
+.card img{
+    transform: scale(1,1);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+}
+.member-icon{
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+}
+.card-img-wrapper:hover .member-icon{
+    bottom: 0;
+    opacity: 1;
+}
+.animate{
+    transition: all 0.3s ease-in-out;
+}
