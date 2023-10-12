@@ -1,54 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HousingService } from 'src/app/services/housing.service';
+import { IProperty } from './IProperty.interfae'; // Ensure the correct path
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-property-list',
   templateUrl: './property-list.component.html',
   styleUrls: ['./property-list.component.css']
 })
-export class PropertyListComponent {
-  properties : Array <any> =[
-    {
-      "Id":1,
-      "Name":"Birla House",
-      "Type":"House",
-      "Price":12000
+export class PropertyListComponent implements OnInit {
+  SellRent = 1;
+  properties: IProperty[];
 
-    },
-    {
-      "Id":2,
-      "Name":"Erose villa",
-      "Type":"House",
-      "Price":18600
+  constructor(private route: ActivatedRoute, private housingService: HousingService) { }
 
-    },
-    {
-      "Id":3,
-      "Name":"Gree Garden",
-      "Type":"House",
-      "Price":17000
+  ngOnInit(): void {
+    if(this.route.snapshot.url.toString()){
+      this.SellRent = 2;// Means we are on rent-prperty URL else we are on base URL
+    }
 
-    },
-    {
-      "Id":4,
-      "Name":"White House",
-      "Type":"House",
-      "Price":25000
-
-    },
-    {
-      "Id":5,
-      "Name":"Macro Home",
-      "Type":"House",
-      "Price":20000
-
-    },
-    {
-      "Id":6,
-      "Name":"MoonLigt",
-      "Type":"House",
-      "Price":15000
-
-    },
-
-]
+    this.housingService.getAllProperties(this.SellRent).subscribe(
+      data =>{
+        this.properties = data;
+        console.log(data);
+      
+        
+      },
+      (error) => {
+        console.log('httperror:');
+        console.log(error);
+      }
+    );
+  }
 }

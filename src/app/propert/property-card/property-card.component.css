@@ -1,7 +1,13 @@
 
+
 .promImg{
-    height: 250px;
+    height: 290px;
     width: 270px;
+    overflow: hidden;
+
+}
+.card{
+    height: 50 rem;
 }
 
 .card-img-wrapper{
@@ -36,4 +42,8 @@
 }
 .animate{
     transition: all 0.3s ease-in-out;
+}
+.property.Image{
+    overflow: hidden;
+    width: 15 rem;
 }

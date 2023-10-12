@@ -1,0 +1,56 @@
+[
+    {
+      "Id":1,
+      "SellRent":2,
+      "Name":"Birla House",
+      "Type":"House",
+      "Price":12000,
+      "Image":"prop-1"
+
+    },
+    {
+      "Id":2,
+      "SellRent":2,
+      "Name":"Erose villa",
+      "Type":"House",
+      "Price":18600,
+      "Image":"prop-2"
+
+    },
+    {
+      "Id":3,
+      "SellRent":1,
+      "Name":"Gree Garden",
+      "Type":"House",
+      "Price":17000,
+      "Image":"prop-3"
+
+    },
+    {
+      "Id":4,
+      "SellRent":1,
+      "Name":"White House",
+      "Type":"House",
+      "Price":25000,
+      "Image":"prop-4"
+
+    },
+    {
+      "Id":5,
+      "SellRent":1,
+      "Name":"Macro Home",
+      "Type":"House",
+      "Price":20000,
+      "Image":"prop-5"
+
+    },
+    {
+      "Id":6,
+      "SellRent":1,
+      "Name":"MoonLigt",
+      "Type":"House",
+      "Price":15000
+
+    }
+
+]
